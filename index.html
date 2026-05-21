@@ -62,8 +62,7 @@
     .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
 
     /* SECTIONS */
-    section { display: none; min-height: 100vh; }
-    section.active { display: block; }
+    section { display: block; min-height: 100vh; }
 
     /* HERO */
     #home {
@@ -481,7 +480,7 @@
       <div class="reveal" style="margin-top:2.5rem;">
         <div style="background:rgba(26,74,80,0.2); border:1px solid rgba(232,168,32,0.2); padding:2.5rem; text-align:center;">
           <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.25em; color:var(--teal-light); text-transform:uppercase; margin-bottom:1rem;">Reach Out Directly</p>
-          <a href="mailto:nausarchaia@gmail.com" style="font-family:'Cinzel',serif; font-size:1.4rem; color:var(--gold); text-decoration:none; letter-spacing:0.04em; transition:color 0.25s;" onmouseover="this.style.color='var(--gold-light)'" onmouseout="this.style.color='var(--gold)'">nausarchaia@gmail.com</a>
+          <a href="mailto:nausarchaia@gmail.com" style="font-family:'Space Mono',monospace; font-size:1.6rem; color:var(--gold); text-decoration:none; letter-spacing:0.08em; transition:color 0.25s;" onmouseover="this.style.color='var(--gold-light)'" onmouseout="this.style.color='var(--gold)'">nausarchaia@gmail.com</a>
           <p style="margin-top:1.2rem; font-size:0.95rem; color:var(--text-muted); font-style:italic;">Whether you're a researcher, institution, or explorer — we'd love to connect.</p>
           <div style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
             <a href="mailto:nausarchaia@gmail.com" class="btn-primary" style="text-decoration:none; display:inline-block;">Send an Email</a>
@@ -510,7 +509,7 @@
       document.getElementById(id).classList.add('active');
       const navEl = document.getElementById('nav-' + id);
       if (navEl) navEl.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
       setTimeout(initReveal, 80);
     }
     function initReveal() {
